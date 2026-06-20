@@ -3,85 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JoyWardana Panel</title>
+    <title>JoyWardana Store</title>
+    <!-- Font Awesome 6 (free) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Google Font (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- SIDEBAR KIRI -->
-    <div class="sidebar" id="sidebar">
-        <div class="sidebar-brand">
-            <i class="fas fa-crown"></i>
-            <span>JoyWardana</span>
+
+<!-- ====== NAVBAR ATAS (dengan logo & login) ====== -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-brand">
+            <i class="fas fa-crown" style="color:#ffd700;"></i>
+            <span>JOYWARDANA</span>
+            <span class="badge-store">STORE</span>
         </div>
-        <div class="sidebar-menu">
-            <a href="#" class="menu-item active" data-target="dashboard"><i class="fas fa-th-large"></i> Dashboard</a>
-            <a href="#" class="menu-item" data-target="services"><i class="fas fa-server"></i> Layanan</a>
-            <a href="#" class="menu-item" data-target="orders"><i class="fas fa-shopping-cart"></i> Pesanan</a>
-            <a href="#" class="menu-item" data-target="users"><i class="fas fa-users"></i> Pengguna</a>
-            <a href="#" class="menu-item" data-target="settings"><i class="fas fa-cog"></i> Pengaturan</a>
+        <div class="nav-links">
+            <a href="#">Hosting</a>
+            <a href="#">VPS</a>
+            <a href="#">Bot</a>
+            <a href="#">Kontak</a>
         </div>
-        <div class="sidebar-footer">
-            <button id="darkToggle"><i class="fas fa-moon"></i> Mode Gelap</button>
+        <div class="nav-auth">
+            <a href="#" class="btn-outline-light"><i class="fas fa-user"></i> Masuk / Daftar</a>
+        </div>
+        <button class="hamburger-mobile" id="hamburgerBtn"><i class="fas fa-bars"></i></button>
+    </div>
+</nav>
+
+<!-- ====== HERO SECTION ====== -->
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>JOYWARDANA STORE</h1>
+        <h2>Hosting SA-MP Roleplay</h2>
+        <p>Menyediakan hosting enterprise-grade, solusi Discord, produk digital, dan <strong>DDoS Protection</strong> dengan dukungan 24/7.</p>
+        <div class="hero-buttons">
+            <a href="#" class="btn-primary"><i class="fas fa-rocket"></i> Tentang Kami</a>
+            <a href="#" class="btn-secondary"><i class="fas fa-headset"></i> Hubungi</a>
+        </div>
+        <!-- STATS HERO -->
+        <div class="hero-stats">
+            <div class="stat-item"><span>150</span><label>SERVER AKTIF</label></div>
+            <div class="stat-item"><span>99.9</span><label>GARANSI UPTIME</label></div>
+            <div class="stat-item"><span>24</span><label>DUKUNGAN 24/7</label></div>
+            <div class="stat-item"><span>2024</span><label>BERDIRI SEJAK</label></div>
         </div>
     </div>
+</section>
 
-    <!-- KONTEN UTAMA -->
-    <div class="main-content">
-        <!-- TOP BAR -->
-        <header class="topbar">
-            <button id="sidebarToggle" class="hamburger"><i class="fas fa-bars"></i></button>
-            <div class="topbar-search">
-                <i class="fas fa-search"></i>
-                <input type="text" placeholder="Cari layanan...">
-            </div>
-            <div class="topbar-profile">
-                <i class="fas fa-bell"></i>
-                <span class="badge">3</span>
-                <img src="https://ui-avatars.com/api/?name=Joy&background=6C63FF&color=fff&size=40" alt="avatar">
-            </div>
-        </header>
+<!-- ====== EKOSISTEM (label) ====== -->
+<div class="ekosistem-badge">
+    <span><i class="fas fa-cubes"></i> EKOSISTEM JOYWARDANA STORE</span>
+</div>
 
-        <!-- SECTION DASHBOARD -->
-        <section id="dashboard" class="content-section active">
-            <h2>Dashboard</h2>
-            <div class="stats-grid">
-                <div class="stat-card"><i class="fas fa-tasks"></i><span>Total Layanan</span><h3>24</h3></div>
-                <div class="stat-card"><i class="fas fa-check-circle"></i><span>Pesanan Selesai</span><h3>1.284</h3></div>
-                <div class="stat-card"><i class="fas fa-clock"></i><span>Pesanan Proses</span><h3>7</h3></div>
-                <div class="stat-card"><i class="fas fa-wallet"></i><span>Saldo</span><h3>Rp 4.750.000</h3></div>
-            </div>
-            <div class="table-wrap">
-                <h3>Pesanan Terakhir</h3>
-                <table>
-                    <thead><tr><th>ID</th><th>Layanan</th><th>Status</th><th>Tanggal</th></tr></thead>
-                    <tbody>
-                        <tr><td>#ORD-001</td><td>Panel SSH</td><td><span class="status success">Selesai</span></td><td>19-06-2026</td></tr>
-                        <tr><td>#ORD-002</td><td>RDP 7 Hari</td><td><span class="status warning">Proses</span></td><td>20-06-2026</td></tr>
-                        <tr><td>#ORD-003</td><td>VPN Premium</td><td><span class="status danger">Gagal</span></td><td>18-06-2026</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- SECTION LAINNYA (LAYANAN, PESANAN, DLL) -->
-        <section id="services" class="content-section">
-            <h2>Daftar Layanan</h2>
-            <div class="service-list">
-                <div class="service-item"><i class="fas fa-terminal"></i> SSH Premium - Rp 15.000</div>
-                <div class="service-item"><i class="fas fa-desktop"></i> RDP 30 Hari - Rp 85.000</div>
-                <div class="service-item"><i class="fas fa-shield-alt"></i> VPN Lifetime - Rp 120.000</div>
-            </div>
-        </section>
-
-        <section id="orders" class="content-section"><h2>Riwayat Pesanan</h2><p>Data pesanan lengkap di sini.</p></section>
-        <section id="users" class="content-section"><h2>Manajemen Pengguna</h2><p>Daftar pengguna terdaftar.</p></section>
-        <section id="settings" class="content-section"><h2>Pengaturan Panel</h2><p>Konfigurasi sistem.</p></section>
-
-        <!-- FOOTER -->
-        <footer class="main-footer">© 2026 JoyWardana Panel - Versi 2.1.0</footer>
+<!-- ====== KARTU LAYANAN (4 produk) ====== -->
+<section class="layanan-grid">
+    <div class="card-layanan">
+        <div class="card-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+        <h3>LITE Cloud Hosting</h3>
+        <p>Game hosting, VPS NVMe — infrastruktur bertenaga AMD RYZEN & Intel Xeon.</p>
+        <a href="#" class="card-btn">Order Hosting →</a>
     </div>
+    <div class="card-layanan">
+        <div class="card-icon"><i class="fas fa-robot"></i></div>
+        <h3>Bot Hosting</h3>
+        <p>Hosting khusus Discord bot, Telegram bot, dan aplikasi 24/7 — uptime terjamin.</p>
+        <a href="#" class="card-btn">Lihat Harga →</a>
+    </div>
+    <div class="card-layanan">
+        <div class="card-icon"><i class="fas fa-microchip"></i></div>
+        <h3>VPS INTEL SCALABLE</h3>
+        <p>High-Performance Cloud Servers — Intel Xeon Platinum & NVMe Gen4.</p>
+        <a href="#" class="card-btn">Lihat Harga →</a>
+    </div>
+    <div class="card-layanan">
+        <div class="card-icon"><i class="fas fa-server"></i></div>
+        <h3>VPS AMD EPYC™</h3>
+        <p>AMD EPYC™ Genoa · DDR5 · NVMe SSD · High Availability — enterprise.</p>
+        <a href="#" class="card-btn">Lihat Harga →</a>
+    </div>
+</section>
 
-    <script src="script.js"></script>
+<!-- ====== WIDGET CHAT (floating + bubble) ====== -->
+<div class="chat-widget" id="chatWidget">
+    <div class="chat-header" id="chatHeader">
+        <div class="chat-avatar"><i class="fas fa-headset"></i></div>
+        <div class="chat-info">
+            <span class="chat-name">JoyWardana Support</span>
+            <span class="chat-status"><i class="fas fa-circle" style="color:#2ecc71;font-size:10px;"></i> Online · Siap Membantu</span>
+        </div>
+        <button class="chat-close" id="chatClose"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="chat-body" id="chatBody">
+        <div class="chat-msg bot">
+            <div class="msg-bubble">Halo! Selamat datang di JoyWardana Store<br>Ada yang bisa kami bantu hari ini?</div>
+            <div class="msg-time">Baru saja</div>
+        </div>
+        <div class="chat-quick-reply">
+            <button class="qr-btn" data-reply="Info Paket">Info Paket</button>
+            <button class="qr-btn" data-reply="Cara Order">Cara Order</button>
+            <button class="qr-btn" data-reply="Hubungi Admin">Hubungi Admin</button>
+            <button class="qr-btn" data-reply="Status Server">Status Server</button>
+        </div>
+    </div>
+    <div class="chat-footer">
+        <input type="text" placeholder="Ketik pesan kamu..." id="chatInput">
+        <button id="chatSend"><i class="fas fa-paper-plane"></i></button>
+    </div>
+</div>
+
+<!-- Floating toggle chat -->
+<button class="chat-toggle" id="chatToggle">
+    <i class="fas fa-comment-dots"></i>
+</button>
+
+<!-- ====== FOOTER ====== -->
+<footer class="main-footer">
+    <p><i class="fas fa-bolt"></i> POWERED BY JOYWARDANA STORE © 2026</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
-  </html>
+    </html>
